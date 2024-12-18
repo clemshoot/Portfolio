@@ -1,0 +1,183 @@
+/* Style général */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #FDFFF3;
+    height: 100vh; /* Assure que le body prend toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Nécessaire pour positionner le bloc noir */
+}
+
+
+/* En-tête */
+header {
+    display: flex;
+    width: auto;
+
+    background-color: #01403A; /* Couleur de fond du header */
+    padding: 0 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    margin-right: 50px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    padding-left: 1em;
+}
+
+.logo {
+    height: 80px; /* Ajustez la taille selon vos préférences */
+    width: auto; /* Conserve les proportions de l'image */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 100px; /* Espacement entre les onglets */
+    padding: 0 0;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FDFFF3; /* Couleur du texte */
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Inter Black', sans-serif; /* Style de la police */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d4e1dd; /* Couleur lors du survol */
+}
+/* Section principale */
+.hero {
+    flex-grow: 1; /* Remplit tout l'espace restant de la page */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    z-index: 2; /* Assure que le contenu reste devant le bloc noir */
+}
+
+.content {
+    max-width: 50%;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #01403A;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #45a049;
+}
+
+/* Image circulaire */
+.image-container {
+    flex-shrink: 0;
+    position: relative;
+    margin: 50px;
+}
+
+.profile-image {
+    width: 500x;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+}
+
+.contact-page {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #01403A;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #E7F1EB;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #FDFFF3;
+    color: #01403A;
+    
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #FDFFF3;
+    color: #01403A;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #d4e1dd;
+}
+
+.contact-phone {
+    margin-top: 15px;
+    color: #E7F1EB;
+    font-size: 16px;
+    text-align: center;
+}
