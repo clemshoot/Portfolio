@@ -3,11 +3,12 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #FDFFF3;
-    height: 100vh; /* Assure que le body prend toute la hauteur de l'écran */
+    min-height: 100vh; /* Permet au contenu d'étendre la hauteur si nécessaire */
     display: flex;
     flex-direction: column;
-    position: relative; /* Nécessaire pour positionner le bloc noir */
+    position: relative;
 }
+
 
 
 /* En-tête */
@@ -119,6 +120,8 @@ nav ul li a:hover {
 .contact-page {
     text-align: center;
     margin-top: 20px;
+    padding-bottom: 50px; /* Ajoute un espace sous le formulaire */
+    margin-bottom: 50px;  /* Décale encore plus du footer */
 }
 
 .contact-title {
@@ -132,10 +135,19 @@ nav ul li a:hover {
     max-width: 600px;
     margin: 0 auto;
     background-color: #01403A;
-    padding: 20px;
+    padding: 50px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
 }
+
+.contact-form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 .contact-form label {
     display: block;
@@ -148,7 +160,7 @@ nav ul li a:hover {
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin-bottom: 30px;
     border: none;
@@ -161,7 +173,7 @@ nav ul li a:hover {
 
 .contact-form button {
     display: block;
-    width: 100%;
+    width: 80%;
     padding: 10px;
     background-color: #FDFFF3;
     color: #01403A;
@@ -181,4 +193,78 @@ nav ul li a:hover {
     color: #E7F1EB;
     font-size: 16px;
     text-align: center;
+}
+
+  .about h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+    color: black;
+  }
+  .info {
+    text-align: center;
+    margin: 20px 0;
+    color: black;
+  }
+  .info p {
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+
+  .passions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+  }
+  .passion-item {
+    text-align: center;
+    color: black;
+  }
+  .passion-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #204d3a;
+  }
+  .work {
+    margin: 20px;
+  }
+  .work-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .work-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+.about h2 {
+    
+    text-align: center;
+    color: black;
+}
+
+.about h3 {
+    text-align: left;
+    color: black;
+    padding-left: 1.2em;
+}
+
+p{
+    color: #02735E;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #01403A;
+    color: #FDFFF3;
 }
