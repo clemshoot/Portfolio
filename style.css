@@ -328,14 +328,25 @@ p {
 
 .about-hero {
     position: relative;
-    height: 300px;
+    min-height: 300px; /* Remplacez height par min-height */
+    height: auto; /* Permettre à la hauteur de s'adapter au contenu */
     margin-bottom: 30px;
+    overflow: hidden; /* Ajout pour gérer le débordement */
 }
 
 .about-hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.about-overlay {
+    position: relative; /* Changez absolute en relative */
+    background-color: rgba(0, 0, 0, 0.5); /* Ajoutez un fond semi-transparent */
+    padding: 40px 20px; /* Augmentez le padding */
 }
 
 .about-overlay {
@@ -349,11 +360,6 @@ p {
     justify-content: center;
     padding: 20px;
     color: white;
-}
-
-.about-overlay h2 {
-    font-style: italic;
-    margin-bottom: 20px;
 }
 
 /* Passions Section */
@@ -454,31 +460,57 @@ p {
 }
 
 
+/* Section Portfolio */
 .portfolio-cards {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap; /* Permet d'aller à la ligne automatiquement */
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .portfolio-card {
-    flex: 1;
+    flex: 1 1 calc(33.333% - 20px); /* Chaque carte prend un tiers de la largeur avec l'espace entre elles */
     height: 300px;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    flex-wrap: wrap;
 }
 
 .portfolio-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    flex-wrap: wrap;
 }
+
+@media (max-width: 768px) {
+    .portfolio-cards {
+        flex-direction: column; /* Les cartes s'empilent verticalement */
+        gap: 20px;
+    }
+
+    .portfolio-card {
+        width: 100%; /* Prend toute la largeur */
+        height: auto; /* Ajuste la hauteur à l'image */
+    }
+
+    .portfolio-card img {
+        height: auto; /* Ajuste la hauteur de l'image */
+    }
+
+    .passion-cards {
+        flex-direction: column; /* Empile les cartes dans les passions */
+        gap: 20px;
+    }
+
+    .passion-card {
+        width: 100%; /* S'étend sur toute la largeur */
+    }
+}
+
 
 .portfolio-card a {
     position: absolute;
@@ -511,7 +543,7 @@ p {
     color: black;
     text-align: center;
     font-size: 2em;
-    font-family: cursive;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 p{
@@ -560,15 +592,6 @@ span{
         font-size: 1.2rem;
     }
 
-    .passion-cards {
-        flex-direction: column; /* Une carte par ligne */
-    }
-
-    .portfolio-cards {
-        flex-direction: column; /* Une carte par ligne */
-        gap: 30px;
-    }
-
     .education {
         flex-direction: column; /* Empile les éléments */
         text-align: center;
@@ -609,16 +632,12 @@ span{
         width: 80%; /* L'image occupe une large partie */
         margin: 0 auto;
     }
-
-    .portfolio-cards {
-        flex-wrap: wrap; /* Répartit les cartes sur plusieurs lignes */
-        gap: 15px;
-    }
 }
 
 img {
-    max-width: 100%; /* Empêche les images de dépasser la largeur de leur conteneur */
-    height: auto; /* Garde les proportions */
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 .container, .about-hero, .portfolio-hero {
@@ -720,3 +739,47 @@ html{
       transform: rotate(360deg);
     }
   }
+
+  .card-container {
+    display: flex;
+    justify-content: center; /* Centre les cards horizontalement */
+    gap: 20px; /* Ajoute un espace entre les cards */
+    flex-wrap: wrap; /* Permet d’aller sur plusieurs lignes si l’espace est insuffisant */
+    padding: 20px;
+}
+
+.e-card {
+    margin: 0; /* Supprime la marge auto du centre */
+}
+
+@media (max-width: 768px) {
+    .about-hero h2 {
+        font-size: 2em; /* Réduire la taille du titre sur mobile */
+        margin-bottom: 15px;
+    }
+    
+    .about-overlay {
+        padding: 20px; /* Réduire le padding sur mobile */
+    }
+    
+    .about-overlay p {
+        font-size: 0.9em; /* Réduire légèrement la taille du texte */
+        line-height: 1.5; /* Améliorer la lisibilité */
+    }
+    
+    .about-hero img {
+        height: 100%;
+        object-position: center; /* Assurer que l'image est bien centrée */
+    }
+}
+
+/* Pour les tablettes */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .about-hero h2 {
+        font-size: 3em;
+    }
+    
+    .about-overlay {
+        padding: 30px;
+    }
+}
