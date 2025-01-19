@@ -783,3 +783,41 @@ html{
         padding: 30px;
     }
 }
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Crée des colonnes de taille variable */
+    gap: 20px; /* Espacement entre les images */
+    padding: 20px;
+    margin: 0;
+    background-color: #01403A;
+}
+
+/* Style pour chaque image de la galerie */
+.gallery-item img {
+    width: 100%; /* Les images remplissent la largeur de leur conteneur */
+    height: auto;
+    border-radius: 8px; /* Bord arrondi pour un look plus doux */
+    transition: transform 0.3s ease-in-out; /* Transition pour un effet au survol */
+}
+
+/* Effet au survol des images */
+.gallery-item img:hover {
+    transform: scale(1.05); /* Agrandit légèrement l'image au survol */
+}
+
+/* Ajouter un peu d'ombre et de bordure pour un effet de profondeur */
+.gallery-item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+h6{
+    text-align: center;
+    color: #d4e1dd;
+    font-size: 4.5rem;
+    background-color: #01403A;
+}
