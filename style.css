@@ -13,7 +13,7 @@ body {
 
 
 /* Styles de base */
-.navbar2 {
+.navbar {
     position: sticky;
     top: 0;
     left: 0;
@@ -520,11 +520,11 @@ p {
     height: 100%;
 }
 
-p {
-    color: black;
+article {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    color: black;
 }
 
 .about h2{
@@ -535,7 +535,7 @@ p {
 .about h3 {
     text-align: center;
     color: black;
-    font-family:cursive;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2em;
 }
 
@@ -547,7 +547,7 @@ p {
 }
 
 p{
-    color: #000000;
+    color: #ffffff;
 }
 
 .footer {
@@ -569,7 +569,7 @@ span{
 
 
 @media (max-width: 768px) {
-    .navbar2 {
+    .navbar {
         flex-direction: column; /* Empile les éléments verticalement */
         text-align: center;
     }
