@@ -13,7 +13,7 @@ body {
 
 
 /* Styles de base */
-.navbar {
+.navbar2 {
     position: sticky;
     top: 0;
     left: 0;
@@ -520,11 +520,11 @@ p {
     height: 100%;
 }
 
-article {
+p {
+    color: black;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    color: black;
 }
 
 .about h2{
@@ -547,7 +547,7 @@ article {
 }
 
 p{
-    color: #ffffff;
+    color: #000000;
 }
 
 .footer {
@@ -569,7 +569,7 @@ span{
 
 
 @media (max-width: 768px) {
-    .navbar {
+    .navbar2 {
         flex-direction: column; /* Empile les éléments verticalement */
         text-align: center;
     }
