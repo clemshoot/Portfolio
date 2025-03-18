@@ -833,7 +833,7 @@ h6{
     }
 
     .about-overlay h2 {
-        font-size: 1.4em; /* Plus petit pour ne pas dépasser */
+        font-size: 1.1em; /* Plus petit pour ne pas dépasser */
         white-space: normal; /* Permet le retour à la ligne si nécessaire */
         text-align: center;
     }
