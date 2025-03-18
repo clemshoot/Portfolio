@@ -828,11 +828,14 @@ h6{
 
     /* À propos de moi */
     .about-overlay h2 {
-        font-size: 2.5em; /* Ajusté pour éviter le retour à la ligne */
+        font-size: 1.8em; /* Réduction du titre */
+        white-space: normal; /* Permet le retour à la ligne si nécessaire */
+        text-align: center;
     }
 
     .about-overlay p {
-        font-size: 0.8em;
+        font-size: 0.75em; /* Texte plus petit pour mieux rentrer */
+        line-height: 1.4; /* Meilleure lisibilité */
     }
 
     /* Travail pour */
@@ -890,13 +893,15 @@ h6{
         height: 50px;
     }
 
+
     /* À propos de moi */
     .about-overlay h2 {
-        font-size: 2em;
+        font-size: 1.5em; /* Encore plus petit sur petits écrans */
     }
 
     .about-overlay p {
-        font-size: 0.75em;
+        font-size: 0.7em;
+        padding: 0 10px; /* Ajoute un peu d'espace pour éviter que ça touche les bords */
     }
 
     /* Travail pour */
