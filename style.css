@@ -829,22 +829,31 @@ h6{
     /* À propos de moi */
     /* Ajustement de l'overlay dans "À propos de moi" */
     .about-overlay {
-        padding: 10px; /* Réduit le padding pour mieux faire rentrer le texte */
+        padding: 5px; /* Moins de padding pour maximiser l'espace */
+        height: 100%; /* S'assure que l'overlay occupe tout l'espace */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centre le texte verticalement */
+        align-items: center;
     }
 
     .about-overlay h2 {
-        font-size: 1.1em; /* Plus petit pour ne pas dépasser */
-        white-space: normal; /* Permet le retour à la ligne si nécessaire */
+        font-size: 1.2em; /* Plus petit pour ne pas dépasser */
         text-align: center;
+        margin-bottom: 5px; /* Réduction de l'espace sous le titre */
+        white-space: nowrap; /* Force le titre à tenir sur une ligne */
+        overflow: hidden;
+        text-overflow: ellipsis; /* Ajoute "..." si besoin */
     }
 
     .about-overlay p {
-        font-size: 0.65em; /* Réduction pour tout faire tenir */
-        line-height: 1.2; /* Moins d'espacement entre les lignes */
-        padding: 5px; /* Ajoute un petit padding pour éviter que ça touche les bords */
-        text-align: justify; /* Justifie le texte pour un rendu plus propre */
+        font-size: 0.55em; /* Texte encore plus petit pour bien rentrer */
+        line-height: 1.1; /* Réduction de l'espacement entre les lignes */
+        text-align: justify;
+        max-height: 100px; /* Empêche le texte de dépasser */
+        overflow: hidden;
+        padding: 0 10px; /* Garde un peu d’espace sur les côtés */
     }
-
     /* Travail pour */
     .work-logo {
         flex-direction: column;
@@ -903,12 +912,12 @@ h6{
 
     /* À propos de moi */
     .about-overlay h2 {
-        font-size: 1.2em; /* Encore plus petit sur petits écrans */
+        font-size: 1em; /* Encore plus petit pour ne pas déborder */
     }
 
     .about-overlay p {
-        font-size: 0.6em;
-        padding: 5px;
+        font-size: 0.5em; /* Réduit encore pour s'assurer que tout rentre */
+        max-height: 90px; /* Ajuste la hauteur max */
     }
 
     /* Travail pour */
