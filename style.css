@@ -827,33 +827,45 @@ h6{
     }
 
     /* À propos de moi */
-    /* Ajustement de l'overlay dans "À propos de moi" */
+    /* Ajustement du conteneur "À propos de moi" */
+    .about-hero {
+        min-height: 220px; /* Fixe la hauteur pour éviter le débordement */
+        height: 220px;
+        position: relative;
+    }
+
+    /* Ajustement du fond semi-transparent */
     .about-overlay {
-        padding: 5px; /* Moins de padding pour maximiser l'espace */
-        height: 100%; /* S'assure que l'overlay occupe tout l'espace */
+        padding: 5px; /* Moins de padding pour maximiser l’espace */
+        height: 100%; /* Prend toute la hauteur disponible */
         display: flex;
         flex-direction: column;
         justify-content: center; /* Centre le texte verticalement */
         align-items: center;
+        background-color: rgba(0, 0, 0, 0.6); /* Rendre le fond un peu plus foncé pour la lisibilité */
     }
 
+    /* Titre "À propos de moi" */
     .about-overlay h2 {
-        font-size: 1.2em; /* Plus petit pour ne pas dépasser */
+        font-size: 1.1em; /* Plus petit pour éviter le retour à la ligne */
         text-align: center;
-        margin-bottom: 5px; /* Réduction de l'espace sous le titre */
-        white-space: nowrap; /* Force le titre à tenir sur une ligne */
+        white-space: nowrap; /* Empêche le retour à la ligne */
         overflow: hidden;
-        text-overflow: ellipsis; /* Ajoute "..." si besoin */
+        text-overflow: ellipsis; /* Ajoute "..." si jamais c'est trop long */
+        margin-bottom: 5px;
     }
 
+    /* Texte "À propos de moi" */
     .about-overlay p {
-        font-size: 0.55em; /* Texte encore plus petit pour bien rentrer */
-        line-height: 1.1; /* Réduction de l'espacement entre les lignes */
+        font-size: 0.7em; /* Texte plus petit pour bien tenir */
+        line-height: 1.2; /* Réduit l’espacement des lignes */
         text-align: justify;
         max-height: 100px; /* Empêche le texte de dépasser */
         overflow: hidden;
-        padding: 0 10px; /* Garde un peu d’espace sur les côtés */
+        padding: 0 10px; /* Ajoute un peu d’espace à gauche/droite */
+        width: 90%; /* Assure que le texte ne touche pas les bords */
     }
+
     /* Travail pour */
     .work-logo {
         flex-direction: column;
@@ -911,13 +923,18 @@ h6{
 
 
     /* À propos de moi */
+    .about-hero {
+        min-height: 180px;
+        height: 180px;
+    }
+
     .about-overlay h2 {
-        font-size: 1em; /* Encore plus petit pour ne pas déborder */
+        font-size: 1em; /* Encore plus petit si l’écran est ultra petit */
     }
 
     .about-overlay p {
-        font-size: 0.5em; /* Réduit encore pour s'assurer que tout rentre */
-        max-height: 90px; /* Ajuste la hauteur max */
+        font-size: 0.6em;
+        max-height: 80px; /* Réduction encore pour s’adapter aux plus petits écrans */
     }
 
     /* Travail pour */
