@@ -827,43 +827,22 @@ h6{
     }
 
     /* À propos de moi */
-    /* Ajustement du conteneur "À propos de moi" */
-    .about-hero {
-        min-height: 220px; /* Fixe la hauteur pour éviter le débordement */
-        height: 220px;
-        position: relative;
-    }
-
-    /* Ajustement du fond semi-transparent */
+    /* Ajustement de l'overlay dans "À propos de moi" */
     .about-overlay {
-        padding: 5px; /* Moins de padding pour maximiser l’espace */
-        height: 100%; /* Prend toute la hauteur disponible */
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Centre le texte verticalement */
-        align-items: center;
-        background-color: rgba(0, 0, 0, 0.6); /* Rendre le fond un peu plus foncé pour la lisibilité */
+        padding: 10px; /* Réduit le padding pour mieux faire rentrer le texte */
     }
 
-    /* Titre "À propos de moi" */
     .about-overlay h2 {
-        font-size: 1.1em; /* Plus petit pour éviter le retour à la ligne */
+        font-size: 1.1em; /* Plus petit pour ne pas dépasser */
+        white-space: normal; /* Permet le retour à la ligne si nécessaire */
         text-align: center;
-        white-space: nowrap; /* Empêche le retour à la ligne */
-        overflow: hidden;
-        text-overflow: ellipsis; /* Ajoute "..." si jamais c'est trop long */
-        margin-bottom: 5px;
     }
 
-    /* Texte "À propos de moi" */
     .about-overlay p {
-        font-size: 0.7em; /* Texte plus petit pour bien tenir */
-        line-height: 1.2; /* Réduit l’espacement des lignes */
-        text-align: justify;
-        max-height: 100px; /* Empêche le texte de dépasser */
-        overflow: hidden;
-        padding: 0 10px; /* Ajoute un peu d’espace à gauche/droite */
-        width: 90%; /* Assure que le texte ne touche pas les bords */
+        font-size: 0.65em; /* Réduction pour tout faire tenir */
+        line-height: 1.2; /* Moins d'espacement entre les lignes */
+        padding: 5px; /* Ajoute un petit padding pour éviter que ça touche les bords */
+        text-align: justify; /* Justifie le texte pour un rendu plus propre */
     }
 
     /* Travail pour */
@@ -923,18 +902,13 @@ h6{
 
 
     /* À propos de moi */
-    .about-hero {
-        min-height: 180px;
-        height: 180px;
-    }
-
     .about-overlay h2 {
-        font-size: 1em; /* Encore plus petit si l’écran est ultra petit */
+        font-size: 1.2em; /* Encore plus petit sur petits écrans */
     }
 
     .about-overlay p {
         font-size: 0.6em;
-        max-height: 80px; /* Réduction encore pour s’adapter aux plus petits écrans */
+        padding: 5px;
     }
 
     /* Travail pour */
