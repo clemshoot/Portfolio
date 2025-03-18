@@ -74,38 +74,6 @@ nav ul li a:hover {
     padding: 0 1em;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    /* Afficher le bouton hamburger */
-    .hamburger-menu {
-        display: block;
-    }
-
-    /* Masquer le menu par défaut */
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #01403A;
-        width: 100%;
-        padding: 1em 0;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    nav ul li {
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    /* Lorsque la case est cochée, afficher le menu */
-    .toggle-menu:checked + .hamburger-menu + nav ul {
-        display: flex;
-    }
-}
-
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -536,29 +504,6 @@ p {
     height: 100%;
   }
   
-  /* Responsive Design */
-  
-  /* Écran moyen (tablettes) */
-  @media (max-width: 768px) {
-    .portfolio-card {
-      flex: 1 1 calc(50% - 20px); /* Deux cartes par ligne */
-      max-width: calc(50% - 20px);
-      height: 250px; /* Hauteur légèrement réduite */
-    }
-  }
-  
-  /* Écran étroit (mobiles) */
-  @media (max-width: 480px) {
-    .portfolio-card {
-      flex: 1 1 100%; /* Une seule carte par ligne */
-      max-width: 100%;
-      height: auto; /* Hauteur ajustée automatiquement */
-    }
-  
-    .portfolio-card img {
-      height: auto; /* Évite les coupures d'image */
-    }
-  }
 
 p {
     color: black;
@@ -605,74 +550,6 @@ span{
 
 
 
-
-
-
-@media (max-width: 768px) {
-    .navbar2 {
-        flex-direction: column; /* Empile les éléments verticalement */
-        text-align: center;
-    }
-
-    .navbar ul {
-        flex-direction: column; /* Les liens de la navbar s'empilent */
-        gap: 10px;
-    }
-
-    .profile-circle {
-        width: 80px;
-        height: 80px;
-    }
-
-    h1 {
-        font-size: 2rem; /* Réduit la taille des titres */
-    }
-
-    h5 {
-        font-size: 1.2rem;
-    }
-
-    .education {
-        flex-direction: column; /* Empile les éléments */
-        text-align: center;
-    }
-
-    .education img {
-        width: 100%; /* L'image prend toute la largeur */
-        margin-bottom: 20px;
-    }
-
-    .work-logos {
-        flex-direction: column; /* Les logos s'empilent */
-        gap: 20px;
-    }
-}
-
-/* Pour les tablettes (entre 768px et 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .profile-circle {
-        width: 90px;
-        height: 90px;
-    }
-
-    h1 {
-        font-size: 3rem;
-    }
-
-    h5 {
-        font-size: 1.5rem;
-    }
-
-    .education {
-        flex-direction: column; /* Empile les éléments */
-        text-align: center;
-    }
-
-    .education img {
-        width: 80%; /* L'image occupe une large partie */
-        margin: 0 auto;
-    }
-}
 
 img {
     max-width: 100%;
@@ -792,37 +669,7 @@ html{
     margin: 0; /* Supprime la marge auto du centre */
 }
 
-@media (max-width: 768px) {
-    .about-hero h2 {
-        font-size: 2em; /* Réduire la taille du titre sur mobile */
-        margin-bottom: 15px;
-    }
-    
-    .about-overlay {
-        padding: 20px; /* Réduire le padding sur mobile */
-    }
-    
-    .about-overlay p {
-        font-size: 0.9em; /* Réduire légèrement la taille du texte */
-        line-height: 1.5; /* Améliorer la lisibilité */
-    }
-    
-    .about-hero img {
-        height: 100%;
-        object-position: center; /* Assurer que l'image est bien centrée */
-    }
-}
 
-/* Pour les tablettes */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .about-hero h2 {
-        font-size: 3em;
-    }
-    
-    .about-overlay {
-        padding: 30px;
-    }
-}
 
 
 .gallery {
@@ -861,3 +708,218 @@ h6{
     font-size: 4.5rem;
     background-color: #01403A;
 }
+
+/* Responsive pour les tablettes */
+@media (max-width: 1024px) {
+    .navbar2 {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .profile-circle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .header {
+        height: 100vh; /* Force l'image à ne pas bouger */
+    }
+
+    .container {
+        height: 100vh;
+    }
+
+    .content h1 {
+        font-size: 3rem;
+    }
+
+    .content h5 {
+        font-size: 1.5rem;
+    }
+
+    /* À propos de moi */
+    .about-hero {
+        min-height: 250px;
+    }
+
+    .about-overlay h2 {
+        font-size: 3em; /* Empêche le retour à la ligne */
+        white-space: nowrap; /* Force le texte à rester sur une ligne */
+        overflow: hidden;
+    }
+
+    .about-overlay p {
+        font-size: 0.9em; /* Légèrement plus petit pour bien rentrer */
+    }
+
+    /* Travail pour */
+    .work-logos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .work-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .work-logo img {
+        height: 50px;
+        margin-right: 10px;
+    }
+
+    .passion-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio-cards {
+        flex-wrap: wrap;
+    }
+
+    .portfolio-card {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+/* Responsive pour les téléphones */
+@media (max-width: 768px) {
+    .navbar2 {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+
+    .navbar ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+    }
+
+    .toggle-menu:checked + nav ul {
+        display: flex;
+    }
+
+    .profile-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .content h5 {
+        font-size: 1.2rem;
+    }
+
+    /* À propos de moi */
+    .about-overlay h2 {
+        font-size: 2.5em; /* Ajusté pour éviter le retour à la ligne */
+    }
+
+    .about-overlay p {
+        font-size: 0.8em;
+    }
+
+    /* Travail pour */
+    .work-logo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .work-logo img {
+        height: 40px;
+        margin-bottom: 5px;
+    }
+
+    .passion-card img {
+        height: 200px;
+    }
+
+    .portfolio-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .about-overlay {
+        padding: 20px;
+    }
+
+    .contact-form-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}
+
+/* Responsive pour les petits téléphones */
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content h5 {
+        font-size: 1rem;
+    }
+
+    .profile-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* À propos de moi */
+    .about-overlay h2 {
+        font-size: 2em;
+    }
+
+    .about-overlay p {
+        font-size: 0.75em;
+    }
+
+    /* Travail pour */
+    .work-logos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-logo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .work-logo img {
+        height: 35px;
+    }
+
+    .contact-form-container {
+        padding: 15px;
+    }
+
+    .portfolio-overlay h2 {
+        font-size: 2.5em;
+    }
+}
+
