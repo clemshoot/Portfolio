@@ -827,13 +827,22 @@ h6{
     }
 
     /* À propos de moi */
-    /* Ajustement de l'overlay dans "À propos de moi" */
+    
+    .about-hero {
+        background: none !important; /* Supprime toute image */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
     .about-overlay {
         padding: 10px; /* Réduit le padding pour mieux faire rentrer le texte */
     }
 
     .about-overlay h2 {
-        font-size: 1.1em; /* Plus petit pour ne pas dépasser */
+        font-size: 1.4em; /* Plus petit pour ne pas dépasser */
         white-space: normal; /* Permet le retour à la ligne si nécessaire */
         text-align: center;
     }
