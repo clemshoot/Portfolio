@@ -847,7 +847,6 @@ h6{
         color: white;
         font-weight: bold;
         margin-top: 10px; /* Espacement du haut */
-        background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour lisibilité */
         padding: 10px 20px;
         border-radius: 5px;
         width: auto;
