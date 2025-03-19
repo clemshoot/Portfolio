@@ -829,29 +829,24 @@ h6{
     /* À propos de moi */
     
     .about-hero {
-        background: none !important; /* Supprime toute image */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+        background: none !important; /* Supprime l'image */
+        height: auto; /* Ajuste la hauteur au contenu */
+        padding: 20px; /* Ajoute de l'espace autour */
+        text-align: center; /* Centre le texte */
     }
 
-    .about-overlay {
-        padding: 10px; /* Réduit le padding pour mieux faire rentrer le texte */
+    .about-hero h2 {
+        font-size: 1.4em; /* Taille ajustée du titre */
+        color: rgb(255, 255, 255); /* Texte en noir */
+        font-weight: bold;
+        margin-bottom: 10px;
     }
 
-    .about-overlay h2 {
-        font-size: 1.4em; /* Plus petit pour ne pas dépasser */
-        white-space: normal; /* Permet le retour à la ligne si nécessaire */
-        text-align: center;
-    }
-
-    .about-overlay p {
-        font-size: 0.65em; /* Réduction pour tout faire tenir */
-        line-height: 1.2; /* Moins d'espacement entre les lignes */
-        padding: 5px; /* Ajoute un petit padding pour éviter que ça touche les bords */
-        text-align: justify; /* Justifie le texte pour un rendu plus propre */
+    .about-hero p {
+        font-size: 1em; /* Taille du texte adaptée */
+        color: black; /* Texte en noir */
+        line-height: 1.5;
+        text-align: justify;
     }
 
     /* Travail pour */
