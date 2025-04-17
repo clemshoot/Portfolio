@@ -954,3 +954,8 @@ h6{
     }
 }
 
+h4 {
+    font-size: 2rem; /* Ajustez la taille de la police selon vos besoins */
+    font-weight: bold; /* Vous pouvez aussi ajouter une graisse de police si nécessaire */
+    color: #FDFFF3; /* Couleur de texte (ajustez en fonction de votre design) */
+}
